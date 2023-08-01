@@ -8,7 +8,7 @@ import { MyRankingsPageComponent } from './pages/my-rankings-page/my-rankings-pa
 import { UserPageComponent } from './pages/user-page/user-page.component';
 
 const routes: Routes = [
-  { path: '' , component: HomePageComponent },
+  { path: '', component: HomePageComponent },
   { path: 'rankings', component: RankingPageComponent },
   { path: 'analyze', component: AnalyzePageComponent },
   { path: 'compare', component: ComparePageComponent },

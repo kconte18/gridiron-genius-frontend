@@ -10,6 +10,8 @@ import { AnalyzePageComponent } from './pages/analyze-page/analyze-page.componen
 import { ComparePageComponent } from './pages/compare-page/compare-page.component';
 import { MyRankingsPageComponent } from './pages/my-rankings-page/my-rankings-page.component';
 import { UserPageComponent } from './pages/user-page/user-page.component';
+import { CardComponent } from './shared/card/card.component';
+import { ButtonComponent } from './shared/button/button.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { UserPageComponent } from './pages/user-page/user-page.component';
     AnalyzePageComponent,
     ComparePageComponent,
     MyRankingsPageComponent,
-    UserPageComponent
+    UserPageComponent,
+    CardComponent,
+    ButtonComponent
   ],
   imports: [
     BrowserModule,
