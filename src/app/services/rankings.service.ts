@@ -13,6 +13,6 @@ export class RankingsService {
   constructor(private http: HttpClient) { }
 
   getRankings(scoreType: string, positionType: string): Observable<any> {
-    return this.http.get(this.baseUrl + '/' + scoreType + '/' + positionType);
+    return this.http.get<any>(this.baseUrl + '/' + scoreType + '/' + positionType);
   }
 }
