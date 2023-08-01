@@ -16,7 +16,7 @@ export class RankingsTableComponent implements OnInit {
 
   ngOnInit(): void {
     this.rankingsService.getRankings(this.scoreType, this.positionType).subscribe(response => {
-      this.rankings = response.data;
+      this.rankings = response;
       console.log(this.rankings);
     });
   }
