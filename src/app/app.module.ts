@@ -12,6 +12,8 @@ import { MyRankingsPageComponent } from './pages/my-rankings-page/my-rankings-pa
 import { UserPageComponent } from './pages/user-page/user-page.component';
 import { CardComponent } from './shared/card/card.component';
 import { ButtonComponent } from './shared/button/button.component';
+import { HttpClientModule } from '@angular/common/http';
+import { RankingsTableComponent } from './rankings-table/rankings-table.component';
 
 @NgModule({
   declarations: [
@@ -24,11 +26,13 @@ import { ButtonComponent } from './shared/button/button.component';
     MyRankingsPageComponent,
     UserPageComponent,
     CardComponent,
-    ButtonComponent
+    ButtonComponent,
+    RankingsTableComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
