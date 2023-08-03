@@ -4,8 +4,14 @@
             <p *ngIf="option == selected" class="bg-blue-600 cursor-default">{{option}}</p>
             <p *ngIf="option != selected" (click)="toggleSelected($event)" class="hover:bg-slate-400 cursor-pointer">{{option}}</p>
         </ng-container>
+        <span class="material-symbols-outlined">
+            arrow_drop_up
+        </span>
     </ng-container>
     <ng-container *ngIf="!active">
         {{selected}}
+        <span class="material-symbols-outlined">
+            arrow_drop_down
+        </span>
     </ng-container>
 </div>
