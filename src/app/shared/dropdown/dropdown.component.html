@@ -1,0 +1,11 @@
+<div class="border-solid border border-black bg-stone-100 w-fit p-2 cursor-pointer" (click)="toggleActive()">
+    <ng-container *ngIf="active">
+        <ng-container *ngFor="let option of dropDownOptions">
+            <p *ngIf="option == selected" class="bg-blue-600 cursor-default">{{option}}</p>
+            <p *ngIf="option != selected" (click)="toggleSelected($event)" class="hover:bg-slate-400 cursor-pointer">{{option}}</p>
+        </ng-container>
+    </ng-container>
+    <ng-container *ngIf="!active">
+        {{selected}}
+    </ng-container>
+</div>

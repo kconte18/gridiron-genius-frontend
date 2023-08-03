@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { RankingsService } from '../services/rankings.service';
-import { Ranking } from '../models/Ranking';
+import { RankingsService } from '../../services/rankings.service';
+import { Ranking } from '../../models/Ranking';
 
 
 @Component({
@@ -26,7 +26,7 @@ export class RankingsTableComponent implements OnInit {
   ngOnInit(): void {
     this.rankingsService.getRankings(this.scoreType, this.positionType).subscribe(response => {
       this.allRankings = response;
-      this.allRankings.sort(function(a,b) {
+      this.allRankings.sort(function (a, b) {
         return a.rank - b.rank || a.ranking_src.ranking_src_name.charCodeAt(0) - b.ranking_src.ranking_src_name.charCodeAt(0) || a.ranking_src.ranking_src_name.charCodeAt(1) - b.ranking_src.ranking_src_name.charCodeAt(1)
       });
     });
