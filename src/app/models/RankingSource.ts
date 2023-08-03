@@ -1,15 +1,15 @@
 export class RankingSource {
-    rankingSrcName: string;
-    rankingSrcUrl: string;
+    ranking_src_name: string;
+    ranking_src_url: string;
     date: string;
-    scoringType: string;
-    positionRankingType: string;
+    scoring_type: string;
+    position_ranking_type: string;
 
     constructor(rankingSrcName: string, rankingSrcUrl: string, date: string, scoringType: string, positionRankingType: string) {
-        this.rankingSrcName = rankingSrcName;
-        this.rankingSrcUrl = rankingSrcUrl;
+        this.ranking_src_name = rankingSrcName;
+        this.ranking_src_url = rankingSrcUrl;
         this.date = date;
-        this.scoringType = scoringType;
-        this.positionRankingType = positionRankingType;
+        this.scoring_type = scoringType;
+        this.position_ranking_type = positionRankingType;
     }
 }
