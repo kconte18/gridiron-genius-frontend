@@ -6,10 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ranking-page.component.css']
 })
 export class RankingPageComponent implements OnInit {
+  scoreType: string = 'standard';
+  positionType: string = 'overall';
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  receiveSelectionEvent(selection: string): void {
+    selection = selection.toLowerCase();
+    if(selection === 'standard' || selection === 'ppr') {
+      this.scoreType = selection;
+    }
+    else {
+      this.positionType = selection;
+    }
+  }
 }

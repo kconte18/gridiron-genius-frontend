@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-dropdown',
@@ -7,6 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class DropdownComponent implements OnInit {
   @Input() dropDownOptions: string[] = [];
+  @Output() selectionEvent = new EventEmitter<string>();
+  
   active: boolean = false;
   selected: string = '';
 
@@ -22,7 +24,10 @@ export class DropdownComponent implements OnInit {
 
   toggleSelected(event: Event): void {
     this.selected = (event.target as HTMLInputElement).textContent!;
-    console.log((event.target as HTMLInputElement).textContent);
-    // console.log(event.target.textContent);
+    this.sendSelection();
+  }
+
+  sendSelection(): void {
+    this.selectionEvent.emit(this.selected);
   }
 }
