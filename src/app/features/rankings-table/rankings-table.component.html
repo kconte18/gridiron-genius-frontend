@@ -9,12 +9,13 @@
         </tr>
     </thead>
     <tbody>
-        <ng-container *ngFor="let chunk of chunkArray(allRankings, 3)">
+        <ng-container *ngFor="let chunk of chunkArray(allRankings, 3); let i = index">
             <tr>
                 <td>{{chunk[0].rank}}</td>
                 <ng-container *ngFor="let entry of chunk">
                     <td>{{entry.player.player_name}}, {{entry.player.team}}</td>
                 </ng-container>
+                <td>{{averageRankings[i].player.player_name}}, {{averageRankings[i].player.team}}</td>
             </tr>
         </ng-container>
     </tbody>
