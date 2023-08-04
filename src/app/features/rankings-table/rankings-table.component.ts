@@ -21,6 +21,7 @@ export class RankingsTableComponent implements OnChanges, OnInit {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
+      this.allRankings= [];
       this.callGetRankingsService();
   }
 
