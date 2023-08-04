@@ -3,3 +3,23 @@
     top: auto;
     background: linear-gradient(180deg, #ECECEE 0%, #B3B3BC 100%);
 }
+
+.nav-text {
+    background: -webkit-linear-gradient( #5254E0 2.85%, #1F21AD 62.22%, #161779 119.4%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    align-self: center;
+    font-size: 24px;
+    font-weight: 100;
+    letter-spacing: 0.09em;
+}
+.nav-text:hover {
+    background-color: #161779;
+    background: -webkit-linear-gradient(180deg, #ECECEE 0%, #B3B3BC 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#logo {
+    height: 6rem;
+}
