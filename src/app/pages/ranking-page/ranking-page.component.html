@@ -1,5 +1,5 @@
 <app-card>
-    <app-dropdown [dropDownOptions]="['OVERALL', 'QB', 'RB', 'WR', 'DEF', 'K']" (selectionEvent)="receiveSelectionEvent($event)"></app-dropdown>
+    <app-dropdown [dropDownOptions]="['OVERALL', 'QB', 'RB', 'WR', 'TE', 'DEF', 'K']" (selectionEvent)="receiveSelectionEvent($event)"></app-dropdown>
     <app-dropdown [dropDownOptions]="['STANDARD', 'PPR']" (selectionEvent)="receiveSelectionEvent($event)"></app-dropdown>
     <app-rankings-table [scoreType]="scoreType" [positionType]="positionType"></app-rankings-table>
 </app-card>
