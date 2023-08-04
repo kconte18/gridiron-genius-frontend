@@ -1,0 +1,5 @@
+#nav {
+    position: sticky;
+    top: auto;
+    background: linear-gradient(180deg, #ECECEE 0%, #B3B3BC 100%);
+}

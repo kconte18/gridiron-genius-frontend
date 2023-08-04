@@ -2,3 +2,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+
+    /* background: linear-gradient(179.75deg, #5254E0 2.85%, #1F21AD 62.22%, #161779 119.4%); */
+    background: linear-gradient(to bottom, #5254E0 2.85%, #1F21AD 62.22%, #161779 119.4%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Merriweather', serif;
+    width: 100%;
+    min-height: 100%;
+}

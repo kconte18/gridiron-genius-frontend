@@ -1,5 +1,7 @@
 <app-card>
-    <app-dropdown [dropDownOptions]="['OVERALL', 'QB', 'RB', 'WR', 'TE']" (selectionEvent)="receiveSelectionEvent($event)"></app-dropdown>
-    <app-dropdown [dropDownOptions]="['STANDARD', 'PPR']" (selectionEvent)="receiveSelectionEvent($event)"></app-dropdown>
+    <div class="flex justify-center gap-4">
+        <app-dropdown [dropDownOptions]="['OVERALL', 'QB', 'RB', 'WR', 'TE']" (selectionEvent)="receiveSelectionEvent($event)"></app-dropdown>
+        <app-dropdown [dropDownOptions]="['STANDARD', 'PPR']" (selectionEvent)="receiveSelectionEvent($event)"></app-dropdown>
+    </div>
     <app-rankings-table [scoreType]="scoreType" [positionType]="positionType"></app-rankings-table>
 </app-card>
