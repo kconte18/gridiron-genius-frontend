@@ -1,4 +1,4 @@
-<div class="border-solid border border-black bg-stone-100 w-fit p-2 pr-0 cursor-pointer" (click)="toggleActive()">
+<div class="border-solid border border-black bg-stone-100 w-fit p-2 pr-0 cursor-pointer absolute mt-2" (click)="toggleActive()">
     <div *ngIf="active" class="flex flex-col">
         <div *ngFor="let option of dropDownOptions; let i = index;" class="flex">
             <p *ngIf="option == selected" class="bg-blue-600 cursor-default block w-full">{{option}}</p>

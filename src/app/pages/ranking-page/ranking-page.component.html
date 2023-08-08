@@ -1,9 +1,15 @@
 <app-card>
-    <div class="flex justify-center gap-4 mb-6">
-        <p>Position</p>
-        <app-dropdown [dropDownOptions]="['Overall', 'QB', 'RB', 'WR', 'TE']" (selectionEvent)="receiveSelectionEvent($event)"></app-dropdown>
-        <p>Scoring</p>
-        <app-dropdown [dropDownOptions]="['Standard', 'PPR']" (selectionEvent)="receiveSelectionEvent($event)"></app-dropdown>
+    <div class="flex justify-center gap-16 mb-20">
+        <div>
+            <p>Position</p>
+            <app-dropdown [dropDownOptions]="['Overall', 'QB', 'RB', 'WR', 'TE']" (selectionEvent)="receiveSelectionEvent($event)"></app-dropdown>
+        </div>
+        <div>
+            <p>Scoring</p>
+            <app-dropdown [dropDownOptions]="['Standard', 'PPR']" (selectionEvent)="receiveSelectionEvent($event)"></app-dropdown>
+        </div>
     </div>
-    <app-rankings-table [scoreType]="scoreType" [positionType]="positionType"></app-rankings-table>
+    <div class="">
+        <app-rankings-table [scoreType]="scoreType" [positionType]="positionType"></app-rankings-table>
+    </div>
 </app-card>
