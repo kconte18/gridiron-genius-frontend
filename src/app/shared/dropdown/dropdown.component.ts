@@ -1,4 +1,5 @@
 import { Component, ElementRef, EventEmitter, HostListener, Input, OnInit, Output } from '@angular/core';
+import { delay } from 'rxjs';
 
 @Component({
   selector: 'app-dropdown',
@@ -18,13 +19,11 @@ export class DropdownComponent implements OnInit {
     this.selected= this.dropDownOptions[0];
   }
   
-  // @HostListener('document:click', ['$event'])
-  // clickout(event: Event) {
-  //   console.log(event.target)
-  //   if(!(this.eRef.nativeElement.contains(event.target)) && this.active) {
-  //     this.toggleActive();
-  //   } 
-  // }
+  @HostListener('mouseleave') onLeave(){
+    if(this.active) {
+      this.toggleActive();
+    }
+  }
 
   toggleActive(): boolean {
     return this.active = !this.active;
