@@ -1,0 +1,38 @@
+table, th {
+    border: 1px solid;
+    padding: 0.5rem
+}
+
+th {
+    background-color: #D9D9DD;
+}
+
+/* AVERAGE HEADER */
+th:nth-last-child(1) {
+    background-color: #1F21AD;
+    color: white;
+    border-color: black;
+}
+
+td {
+    padding: 0.5rem;
+    border-left: 1px solid;
+}
+
+tr:nth-child(even) {
+    background-color: #D9D9DD;
+}
+
+/* AVERAGE EVEN CELL */
+tr:nth-child(even) td:nth-last-child(1) {
+    background-color: #1F21AD;
+    color: white;
+    border-color: black;
+}
+
+/* AVERAGE ODD CELL */
+tr:nth-child(odd) td:nth-last-child(1) {
+    background-color: #5254E0;
+    color: white;
+    border-color: black;
+}
