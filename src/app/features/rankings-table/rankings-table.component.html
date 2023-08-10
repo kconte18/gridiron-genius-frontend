@@ -2,6 +2,7 @@
     <thead>
         <tr>
             <th>Rank</th>
+            <th>ESPN</th>
             <th>Fantasy Pros</th>
             <th>FFToday</th>
             <th>The Score</th>
@@ -10,7 +11,7 @@
         </tr>
     </thead>
     <tbody>
-        <ng-container *ngFor="let chunk of chunkArray(allRankings, 4); let i = index">
+        <ng-container *ngFor="let chunk of chunkArray(allRankings, 5); let i = index">
             <tr>
                 <td class="flex justify-center border-none">{{chunk[0].rank}}</td>
                 <ng-container *ngFor="let entry of chunk">

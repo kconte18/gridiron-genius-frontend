@@ -67,7 +67,7 @@ export class RankingsTableComponent implements OnChanges, OnInit {
       this.averageRankings = this.averageRankings.slice(0,50)
     }
     else if(this.positionType == 'te'){
-      this.averageRankings = this.averageRankings.slice(0,40)
+      this.averageRankings = this.averageRankings.slice(0,35)
     }
   }
 }
