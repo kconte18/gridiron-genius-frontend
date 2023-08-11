@@ -17,13 +17,14 @@ export class SearchBarComponent implements OnInit {
   }
   
   sendInputText(): void {
-    clearTimeout(this.timerToSend)
-    this.startTimerToSend();
+    // clearTimeout(this.timerToSend)
+    // this.startTimerToSend();
+    this.textEvent.emit(this.inputText);
   }
 
-  startTimerToSend(): void {
-    this.timerToSend = setTimeout(() => { 
-        this.textEvent.emit(this.inputText);
-    }, 500);
-  }
+  // startTimerToSend(): void {
+  //   this.timerToSend = setTimeout(() => { 
+  //       this.textEvent.emit(this.inputText);
+  //   }, 500);
+  // }
 }

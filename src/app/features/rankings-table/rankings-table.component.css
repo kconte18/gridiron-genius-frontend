@@ -48,3 +48,7 @@ tr:nth-child(odd) td:nth-last-child(1) {
         font-size: 6px;
     }
 }
+
+.match {
+    background-color: green !important;
+}

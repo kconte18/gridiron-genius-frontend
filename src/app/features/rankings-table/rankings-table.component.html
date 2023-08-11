@@ -15,19 +15,19 @@
             <tr>
                 <td class="flex justify-center border-none">{{chunk[0].rank}}</td>
                 <ng-container *ngFor="let entry of chunk">
-                    <td>{{entry.player.player_name}}, 
-                        {{entry.player.team}}
+                    <td
+                        [ngClass]="entry.player.player_name.toLowerCase().includes(searchBarText.toLowerCase()) && searchBarText != '' && searchBarText != ' ' ? 'match' : '' ">
+                        <!-- <td [ngClass]="entry.player.player_name.toLowerCase().includes(searchBarText.toLowerCase) ? 'active' : '' "> -->
+                        {{entry.player.player_name}}, {{entry.player.team}}
                         <span *ngIf="entry.ranking_src.position_ranking_type === 'OVERALL'" class="font-bold">
-                            ({{entry.player.position}})
-                        </span>
+                            ({{entry.player.position}}) </span>
                     </td>
                 </ng-container>
-                <td >
-                    {{averageRankings[i].player.player_name}}, 
-                    {{averageRankings[i].player.team}}
+                <td
+                    [ngClass]="averageRankings[i].player.player_name.toLowerCase().includes(searchBarText.toLowerCase()) && searchBarText != '' && searchBarText != ' ' ? 'match' : '' ">
+                    {{averageRankings[i].player.player_name}}, {{averageRankings[i].player.team}}
                     <span *ngIf="averageRankings[i].ranking_src.position_ranking_type === 'OVERALL'" class="font-bold">
-                        ({{averageRankings[i].player.position}})
-                    </span>
+                        ({{averageRankings[i].player.position}}) </span>
                 </td>
             </tr>
         </ng-container>
