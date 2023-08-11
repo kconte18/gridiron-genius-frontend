@@ -15,6 +15,8 @@ import { ButtonComponent } from './shared/button/button.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RankingsTableComponent } from './features/rankings-table/rankings-table.component';
 import { DropdownComponent } from './shared/dropdown/dropdown.component';
+import { SearchBarComponent } from './shared/search-bar/search-bar.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,12 +31,14 @@ import { DropdownComponent } from './shared/dropdown/dropdown.component';
     CardComponent,
     ButtonComponent,
     RankingsTableComponent,
-    DropdownComponent
+    DropdownComponent,
+    SearchBarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

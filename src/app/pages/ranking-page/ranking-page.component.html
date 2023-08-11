@@ -1,5 +1,6 @@
 <app-card>
     <div class="flex justify-center gap-16 mb-20">
+        <app-search-bar class="mt-7" (textEvent)="receiveInputText($event)"></app-search-bar>
         <div>
             <p>Position</p>
             <app-dropdown [dropDownOptions]="['Overall', 'QB', 'RB', 'WR', 'TE']" (selectionEvent)="receiveSelectionEvent($event)"></app-dropdown>
@@ -10,6 +11,6 @@
         </div>
     </div>
     <div class="">
-        <app-rankings-table [scoreType]="scoreType" [positionType]="positionType"></app-rankings-table>
+        <app-rankings-table [scoreType]="scoreType" [positionType]="positionType" [searchBarText]="searchBarText"></app-rankings-table>
     </div>
 </app-card>

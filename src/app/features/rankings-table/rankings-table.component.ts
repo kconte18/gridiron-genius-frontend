@@ -11,6 +11,8 @@ export class RankingsTableComponent implements OnChanges, OnInit {
   @Input() scoreType!: string;
   @Input() positionType!: string;
 
+  @Input() searchBarText: string = '';
+
   allRankings: Ranking[] = [];
   averageRankings: Ranking[] = [];
   chunk: Ranking[] = [];
@@ -22,8 +24,10 @@ export class RankingsTableComponent implements OnChanges, OnInit {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
+    if(changes['positionType'] != undefined || changes['scoreType'] != undefined) {
       this.allRankings= [];
       this.callGetRankingsService();
+    }
   }
 
   chunkArray(array: any[], chunkSize: number): any[] {

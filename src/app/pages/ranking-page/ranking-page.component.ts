@@ -9,6 +9,8 @@ export class RankingPageComponent implements OnInit {
   scoreType: string = 'standard';
   positionType: string = 'overall';
 
+  searchBarText: string = '';
+
   constructor() { }
 
   ngOnInit(): void {
@@ -22,5 +24,9 @@ export class RankingPageComponent implements OnInit {
     else {
       this.positionType = selection;
     }
+  }
+
+  receiveInputText(userInput: string): void {
+    this.searchBarText = userInput;
   }
 }
