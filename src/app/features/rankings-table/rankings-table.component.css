@@ -36,3 +36,15 @@ tr:nth-child(odd) td:nth-last-child(1) {
     color: white;
     border-color: black;
 }
+
+@media screen and (max-width: 640px) {
+    table {
+        font-size: xx-small;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    table {
+        font-size: 6px;
+    }
+}

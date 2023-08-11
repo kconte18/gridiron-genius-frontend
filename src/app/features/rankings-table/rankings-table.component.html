@@ -1,4 +1,4 @@
-<table>
+<table class="table-auto text-sm max-md:text-xs" id="table">
     <thead>
         <tr>
             <th>Rank</th>
@@ -18,7 +18,7 @@
                     <td>{{entry.player.player_name}}, 
                         {{entry.player.team}}
                         <span *ngIf="entry.ranking_src.position_ranking_type === 'OVERALL'" class="font-bold">
-                            {{entry.player.position}}
+                            ({{entry.player.position}})
                         </span>
                     </td>
                 </ng-container>
@@ -26,7 +26,7 @@
                     {{averageRankings[i].player.player_name}}, 
                     {{averageRankings[i].player.team}}
                     <span *ngIf="averageRankings[i].ranking_src.position_ranking_type === 'OVERALL'" class="font-bold">
-                        {{averageRankings[i].player.position}}
+                        ({{averageRankings[i].player.position}})
                     </span>
                 </td>
             </tr>
