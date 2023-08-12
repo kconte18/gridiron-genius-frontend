@@ -1,0 +1,7 @@
+#search-bar {
+    font-size: 24px;
+}
+
+#search-bar:focus {
+    outline: none;
+}

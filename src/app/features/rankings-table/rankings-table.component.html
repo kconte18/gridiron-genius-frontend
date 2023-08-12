@@ -13,11 +13,10 @@
     <tbody>
         <ng-container *ngFor="let chunk of chunkArray(allRankings, 5); let i = index">
             <tr>
-                <td class="flex justify-center border-none">{{chunk[0].rank}}</td>
+                <td class="flex justify-center" id="rank">{{chunk[0].rank}}</td>
                 <ng-container *ngFor="let entry of chunk">
                     <td
                         [ngClass]="entry.player.player_name.toLowerCase().includes(searchBarText.toLowerCase()) && searchBarText != '' && searchBarText != ' ' ? 'match' : '' ">
-                        <!-- <td [ngClass]="entry.player.player_name.toLowerCase().includes(searchBarText.toLowerCase) ? 'active' : '' "> -->
                         {{entry.player.player_name}}, {{entry.player.team}}
                         <span *ngIf="entry.ranking_src.position_ranking_type === 'OVERALL'" class="font-bold">
                             ({{entry.player.position}}) </span>

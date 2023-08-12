@@ -1,16 +1,16 @@
 <app-card>
-    <div class="flex justify-center gap-16 mb-20">
+    <div class="flex justify-start gap-16 mb-8 ml-16 mr-16 mt-4">
         <app-search-bar class="mt-7" (textEvent)="receiveInputText($event)"></app-search-bar>
         <div>
-            <p>Position</p>
+            <p class="font-bold">Position</p>
             <app-dropdown [dropDownOptions]="['Overall', 'QB', 'RB', 'WR', 'TE']" (selectionEvent)="receiveSelectionEvent($event)"></app-dropdown>
         </div>
         <div>
-            <p>Scoring</p>
+            <p class="font-bold">Scoring</p>
             <app-dropdown [dropDownOptions]="['Standard', 'PPR']" (selectionEvent)="receiveSelectionEvent($event)"></app-dropdown>
         </div>
     </div>
-    <div class="">
+    <div class="ml-16 mr-16 mb-16">
         <app-rankings-table [scoreType]="scoreType" [positionType]="positionType" [searchBarText]="searchBarText"></app-rankings-table>
     </div>
 </app-card>

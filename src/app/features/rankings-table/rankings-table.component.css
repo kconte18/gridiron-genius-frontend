@@ -50,6 +50,10 @@ tr:nth-child(odd) td:nth-last-child(1) {
 }
 
 .match {
-    background: #F7B855 !important;
+    background-color: #C69E5F !important;
     color: black !important;
+}
+
+#rank {
+    border-style: none;
 }

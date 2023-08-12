@@ -1,3 +1,6 @@
-<div>
-    <input type="text" [(ngModel)]="inputText" (input)="sendInputText()"/>
+<div class="flex bg-[#D9D9DD] focus-within:ring focus-within:ring-[#C69E5F]" id="search-container">
+    <span class="material-symbols-outlined text-5xl">
+        search
+    </span>
+    <input class="bg-transparent pl-4" id="search-bar" type="text" [(ngModel)]="inputText" placeholder="Player Name..." (input)="sendInputText()"/>
 </div>
