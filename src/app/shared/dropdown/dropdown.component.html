@@ -1,4 +1,4 @@
-<div *ngIf="active" class="flex flex-col border-4 border-[#C69E5F] bg-[#D9D9DD] w-fit p-2 pr-0 absolute mt-2 text-xl text-[#2B2B31] gap-2" (click)="toggleActive()">
+<div *ngIf="active" class="flex flex-col outline outline-[#C69E5F] bg-[#D9D9DD] w-fit p-2 pr-0 absolute mt-2 text-xl text-[#2B2B31] gap-2" (click)="toggleActive()">
     <div *ngFor="let option of dropDownOptions; let i = index;" class="flex">
         <p *ngIf="option == selected" class="font-bold cursor-default block w-11/12">{{option}}</p>
         <p *ngIf="option != selected" (click)="toggleSelected($event)" class="hover:bg-[#C69E5F] cursor-pointer block w-11/12">{{option}}</p>
@@ -7,7 +7,7 @@
         </span>
     </div>
 </div>
-<div *ngIf="!active" class="flex bg-[#D9D9DD] w-fit p-2 pr-0 cursor-pointer absolute mt-2 text-xl text-[#2B2B31] hover:border-4 hover:border-[#C69E5F]" (click)="toggleActive()">
+<div *ngIf="!active" class="flex bg-[#D9D9DD] w-fit p-2 pr-0 cursor-pointer absolute mt-2 text-xl text-[#2B2B31] hover:outline hover:outline-[#C69E5F]" (click)="toggleActive()">
     <p>{{selected}}</p>
     <span class="material-symbols-outlined pl-2">
         arrow_drop_down
