@@ -1,11 +1,11 @@
 <app-card>
-    <div class="flex justify-start gap-16 mb-8 ml-16 mr-16 mt-4">
+    <div class="flex justify-start mb-8 ml-16 mr-16 mt-4">
         <app-search-bar class="mt-7" (textEvent)="receiveInputText($event)"></app-search-bar>
-        <div>
+        <div class="ml-16">
             <p class="font-bold">Position</p>
             <app-dropdown [dropDownOptions]="['Overall', 'QB', 'RB', 'WR', 'TE']" (selectionEvent)="receiveSelectionEvent($event)"></app-dropdown>
         </div>
-        <div>
+        <div class="ml-24">
             <p class="font-bold">Scoring</p>
             <app-dropdown [dropDownOptions]="['Standard', 'PPR']" (selectionEvent)="receiveSelectionEvent($event)"></app-dropdown>
         </div>
