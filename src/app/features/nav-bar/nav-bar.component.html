@@ -10,7 +10,10 @@
         <li [routerLink]="'/analyze'" (mouseenter)="hoverAnalyzeIsTrue()" (mouseleave)="hoverAnalyzeIsFalse()" class="cursor-pointer w-fit nav-text">ANALYZE</li>
         <app-analyze-icon *ngIf="isHoverAnalyze" class="mt-14 justify-self-center absolute"></app-analyze-icon>
     </div>
-    <li [routerLink]="'/compare'" class="cursor-pointer w-fit nav-text">COMPARE</li>
+    <div class="grid grid-cols-1 justify-items-center content-center">
+        <li [routerLink]="'/compare'" (mouseenter)="hoverCompareIsTrue()" (mouseleave)="hoverCompareIsFalse()" class="cursor-pointer w-fit nav-text">COMPARE</li>
+        <app-compare-icon *ngIf="isHoverCompare" class="mt-16 justify-self-center absolute"></app-compare-icon>
+    </div>
     <!-- <li class="flex-1"></li> -->
     <!-- <li [routerLink]="'/my-rankings'" class="cursor-pointer w-fit nav-text justify-self-end">MY RANKINGS</li>
     <li [routerLink]="'/user'" class="cursor-pointer w-fit nav-text justify-self-end">USER</li> -->

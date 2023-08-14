@@ -9,6 +9,7 @@ export class NavBarComponent implements OnInit {
 
   isHoverRanking: boolean = false;
   isHoverAnalyze: boolean = false;
+  isHoverCompare: boolean = false;
 
   screenWidth: number = 0;
   screenHeight: number = 0;
@@ -41,6 +42,18 @@ export class NavBarComponent implements OnInit {
   hoverAnalyzeIsFalse(): void {
     if(this.screenWidth > 820) {
       this.isHoverAnalyze = false;
+    }
+  }
+
+  hoverCompareIsTrue(): void {
+    if(this.screenWidth > 820) {
+      this.isHoverCompare = true;
+    }
+  }
+
+  hoverCompareIsFalse(): void {
+    if(this.screenWidth > 820) {
+      this.isHoverCompare = false;
     }
   }
 }
