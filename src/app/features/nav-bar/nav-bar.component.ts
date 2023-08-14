@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavBarComponent implements OnInit {
 
-  isHover: boolean = false;
+  isHoverRanking: boolean = false;
+  isHoverAnalyze: boolean = false;
 
   screenWidth: number = 0;
   screenHeight: number = 0;
@@ -19,15 +20,27 @@ export class NavBarComponent implements OnInit {
     this.screenHeight = window.innerHeight;
   }
 
-  hoverIsTrue(): void {
+  hoverRankingIsTrue(): void {
     if(this.screenWidth > 820){
-      this.isHover = true;
+      this.isHoverRanking = true;
     }
   }
 
-  hoverIsFalse(): void {
+  hoverRankingIsFalse(): void {
     if(this.screenWidth > 820) {
-      this.isHover = false;
+      this.isHoverRanking = false;
+    }
+  }
+
+  hoverAnalyzeIsTrue(): void {
+    if(this.screenWidth > 820) {
+      this.isHoverAnalyze = true;
+    }
+  }
+
+  hoverAnalyzeIsFalse(): void {
+    if(this.screenWidth > 820) {
+      this.isHoverAnalyze = false;
     }
   }
 }

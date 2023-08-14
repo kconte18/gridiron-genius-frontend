@@ -18,6 +18,7 @@ import { DropdownComponent } from './shared/dropdown/dropdown.component';
 import { SearchBarComponent } from './shared/search-bar/search-bar.component';
 import { FormsModule } from '@angular/forms';
 import { RankingIconComponent } from './shared/ranking-icon/ranking-icon.component';
+import { AnalyzeIconComponent } from './shared/analyze-icon/analyze-icon.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { RankingIconComponent } from './shared/ranking-icon/ranking-icon.compone
     RankingsTableComponent,
     DropdownComponent,
     SearchBarComponent,
-    RankingIconComponent
+    RankingIconComponent,
+    AnalyzeIconComponent
   ],
   imports: [
     BrowserModule,

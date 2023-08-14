@@ -3,10 +3,13 @@
         <img id="logo" src="../../../assets/pictures/Logo.png" alt="Home">
     </li>
     <div class="grid grid-cols-1 justify-items-center content-center">
-        <li [routerLink]="'/rankings'" (mouseenter)="hoverIsTrue()" (mouseleave)="hoverIsFalse()" class="cursor-pointer w-fit nav-text">RANKINGS</li>
-        <app-ranking-icon *ngIf="isHover" class="mt-16 justify-self-center absolute"></app-ranking-icon>
+        <li [routerLink]="'/rankings'" (mouseenter)="hoverRankingIsTrue()" (mouseleave)="hoverRankingIsFalse()" class="cursor-pointer w-fit nav-text">RANKINGS</li>
+        <app-ranking-icon *ngIf="isHoverRanking" class="mt-16 justify-self-center absolute"></app-ranking-icon>
     </div>
-    <li [routerLink]="'/analyze'" class="cursor-pointer w-fit nav-text">ANALYZE</li>
+    <div class="grid grid-cols-1 justify-items-center content-center">
+        <li [routerLink]="'/analyze'" (mouseenter)="hoverAnalyzeIsTrue()" (mouseleave)="hoverAnalyzeIsFalse()" class="cursor-pointer w-fit nav-text">ANALYZE</li>
+        <app-analyze-icon *ngIf="isHoverAnalyze" class="mt-14 justify-self-center absolute"></app-analyze-icon>
+    </div>
     <li [routerLink]="'/compare'" class="cursor-pointer w-fit nav-text">COMPARE</li>
     <!-- <li class="flex-1"></li> -->
     <!-- <li [routerLink]="'/my-rankings'" class="cursor-pointer w-fit nav-text justify-self-end">MY RANKINGS</li>
