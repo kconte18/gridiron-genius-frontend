@@ -2,7 +2,10 @@
     <li [routerLink]="''" class="cursor-pointer w-fit" id="logo-div">
         <img id="logo" src="../../../assets/pictures/Logo.png" alt="Home">
     </li>
-    <li [routerLink]="'/rankings'" class="cursor-pointer w-fit nav-text">RANKINGS</li>
+    <div class="grid grid-cols-1 justify-items-center content-center">
+        <li [routerLink]="'/rankings'" (mouseenter)="hoverIsTrue()" (mouseleave)="hoverIsFalse()" class="cursor-pointer w-fit nav-text">RANKINGS</li>
+        <app-ranking-icon *ngIf="isHover" class="mt-16 justify-self-center absolute"></app-ranking-icon>
+    </div>
     <li [routerLink]="'/analyze'" class="cursor-pointer w-fit nav-text">ANALYZE</li>
     <li [routerLink]="'/compare'" class="cursor-pointer w-fit nav-text">COMPARE</li>
     <!-- <li class="flex-1"></li> -->

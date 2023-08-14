@@ -47,13 +47,21 @@
 }
 
 .nav-text:hover {
-    background-color: #161779;
-    background: -webkit-linear-gradient(180deg, #ECECEE 0%, #B3B3BC 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    animation: flicker 0.5s ease-in-out infinite alternate;
 }
 
 #logo {
     width: 14rem;
     min-height: 2rem;
+}
+
+@keyframes flicker {
+	0% {
+		opacity: 0.5;
+        font-size: 24px;
+	}
+	100% {
+		opacity: 1;
+        font-size: 25px;
+	}
 }

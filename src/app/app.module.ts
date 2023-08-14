@@ -17,6 +17,7 @@ import { RankingsTableComponent } from './features/rankings-table/rankings-table
 import { DropdownComponent } from './shared/dropdown/dropdown.component';
 import { SearchBarComponent } from './shared/search-bar/search-bar.component';
 import { FormsModule } from '@angular/forms';
+import { RankingIconComponent } from './shared/ranking-icon/ranking-icon.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { FormsModule } from '@angular/forms';
     ButtonComponent,
     RankingsTableComponent,
     DropdownComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    RankingIconComponent
   ],
   imports: [
     BrowserModule,
