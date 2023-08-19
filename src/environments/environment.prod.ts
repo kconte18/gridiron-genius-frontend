@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  backendRankingsURL: 'http://localhost:8000/rankings'
+  backendRankingsURL: 'https://gridiron-genius.uc.r.appspot.com/rankings'
 };
