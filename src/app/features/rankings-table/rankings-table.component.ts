@@ -39,22 +39,21 @@ export class RankingsTableComponent implements OnChanges, OnInit {
   }
 
   callGetRankingsService(): void {
-    this.rankingsService.getRankings(this.scoreType, this.positionType).subscribe(response => {
-      this.allRankings = response;
-      this.averageRankings = this.allRankings.filter((ranking: Ranking) => {
-        return ranking.ranking_src.ranking_src_name === 'AVERAGE';
-      });
-      this.allRankings = this.allRankings.filter((ranking: Ranking) => {
-        return ranking.ranking_src.ranking_src_name !== 'AVERAGE';
-      });
-      this.allRankings.sort(function (a, b) {
-        return a.rank - b.rank || a.ranking_src.ranking_src_name.charCodeAt(0) - b.ranking_src.ranking_src_name.charCodeAt(0) || a.ranking_src.ranking_src_name.charCodeAt(1) - b.ranking_src.ranking_src_name.charCodeAt(1);
-      });
-      this.averageRankings.sort(function (a, b) {
-        return a.rank - b.rank;
-      });
-      this.sliceAverageRankingsByPosition();
+    // this.rankingsService.getRankings(this.scoreType, this.positionType).subscribe(response => {
+    this.allRankings = this.rankingsService.getRankings(this.scoreType, this.positionType);
+    this.averageRankings = this.allRankings.filter((ranking: Ranking) => {
+      return ranking.ranking_src.ranking_src_name === 'AVERAGE';
     });
+    this.allRankings = this.allRankings.filter((ranking: Ranking) => {
+      return ranking.ranking_src.ranking_src_name !== 'AVERAGE';
+    });
+    this.allRankings.sort(function (a, b) {
+      return a.rank - b.rank || a.ranking_src.ranking_src_name.charCodeAt(0) - b.ranking_src.ranking_src_name.charCodeAt(0) || a.ranking_src.ranking_src_name.charCodeAt(1) - b.ranking_src.ranking_src_name.charCodeAt(1);
+    });
+    this.averageRankings.sort(function (a, b) {
+      return a.rank - b.rank;
+    });
+    this.sliceAverageRankingsByPosition();
   }
 
   sliceAverageRankingsByPosition(): void {
